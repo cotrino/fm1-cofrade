@@ -1,0 +1,22 @@
+{
+  "sdk": {
+    "name": "FM1 Open",
+    "repository": "https://github.com/m-vave/fm1_open",
+    "release": "V14",
+    "update_product": "FM-1_8000014",
+    "location": "vendor/fm1_open (sin modificar)"
+  },
+  "toolchain": {
+    "name": "JieLi Windows 2.5.3 (PI32v2 clang 4.0.1, r3)",
+    "clang_exe_sha256": "d4bc97cf421c1ccc373dd8924ce88720ff7457b3f1478d15df4aeda6ae923bce",
+    "note": "El SDK oficial (sdk/manifest.json) verifica los hashes de la toolchain al compilar."
+  },
+  "web_simulator_toolchain": "WASI SDK 27.0",
+  "reference_project": "https://github.com/cotrino/fm1-betis-mode (solo como inspiracion; no se reutiliza su codigo)",
+  "modified_files": {
+    "app/presets.c": "reemplazado por overlay/app/presets.c",
+    "app/cofrade_marchas.h": "nuevo, generado por tools/gen_marchas.py",
+    "app/screen.c": "solo textos de arranque y cabecera (parches con anclas en Build-Cofrade.ps1)"
+  },
+  "flash": { "app_limit_bytes": 453921, "official_v14_bytes": 453576, "cofrade_bytes": 453896 }
+}
